@@ -78,11 +78,6 @@ with open(LISTOFDOWNLOAD) as fp:
         print("Response :" + str(data) + " \ngetDownloadLink : " + str(_dl_url))
         download_cmd = "wget -P " + PATH + " -O '" +PATH + "/" + file_name + "' '" + _dl_url + "'"
 
-        #Replace some special Chars in file_name
-        file_name = file_name.replace("&" , "_")
-        file_name = file_name.replace("(", "_")
-        file_name = file_name.replace(")", "_")
-
         print(download_cmd)
         os.system(download_cmd)
         line = fp.readline()
