@@ -65,7 +65,7 @@ data = r.json()
 print(data)
 _dl_url = data["response"]["download_url"]
 print("Response :" + str(data) + " \ngetDownloadLink : " + str(_dl_url))
-download_cmd = "wget -P " + PATH + " -O '" + file_name + "' '" + _dl_url + "'"
+download_cmd = "wget -P " + PATH + " -O '" +PATH + "/" + file_name + "' '" + _dl_url + "'"
 
 #Replace some special Chars in file_name
 file_name = file_name.replace("&" , "_")
