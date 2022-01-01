@@ -29,7 +29,6 @@ PARAMS = {"login": USERNAME, "password": PASSWORD}
 
 r = requests.get(url=RPGURL_LOGIN, params=PARAMS)
 data = r.json()
-print("data : " + str(data))
 token = data["response"]["token"]
 
 with open(LISTOFDOWNLOAD) as fp:
@@ -38,11 +37,17 @@ with open(LISTOFDOWNLOAD) as fp:
     while line:
         print("File {}: {}".format(cnt, line.strip()))
         file_name = None
-        _url = line.strip()
-
-        if not _url :
+        file_name_alt = None
+        
+        if not line.strip() :
             print("++END++")
             sys.exit(0)
+
+        if len(line.strip().split("|")) > 2 :
+            _url = line.strip().split("|")[0].strip()
+            file_name_alt = line.strip().split("|")[1].strip()
+        else :
+            _url = line.strip()
 
         _file_id = _url.split("/")[4]
 
@@ -67,6 +72,13 @@ with open(LISTOFDOWNLOAD) as fp:
             result = root.xpath(RPG_XPATH_FILENAME)
             file_name = ''.join([word.strip() for word in result])
             file_name = len(file_name) > 0 and file_name or _file_id
+            if file_name_alt is not None:
+                file_name = file_name_alt
+            file_name = file_name.encode('ascii', 'ignore')
+            if not file_name :
+                file_name = _file_id
+            if os.path.exists(PATH + "/" + file_name) :
+                file_name = _file_id
         ## end IF
 
         url = RPGURL_FILEDOWNLOAD

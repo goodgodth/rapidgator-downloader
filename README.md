@@ -1,6 +1,24 @@
 # Rapidgator-Downloader
 Download file from rapidgator with premium user
 
+## rapidgatorstatus.py
+Download by read list of URL in text file (Example : dl.txt)
+
+### How to run
+
+```sh
+$ python rapidgatorstatus.py {USERNAME-premiumuser} {PASSWORD} {FULL_PATH_OF_FILE_dl.txt}
+```
+
+### Example
+```sh
+$ python rapidgatorstatus.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dl.txt
+
+$ python rapidgatorstatus.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dlwithrename.txt
+
+```
+
+
 ## rapidgatordl.py
 Download by read list of URL in text file (Example : dl.txt)
 
@@ -13,6 +31,9 @@ $ python rapidgatordl.py {USERNAME-premiumuser} {PASSWORD} {FULL_PATH_OF_FILE_dl
 ### Example
 ```sh
 $ python rapidgatordl.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dl.txt /home/noeybnk48/download/
+
+$ python rapidgatordl.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dlwithrename.txt /home/noeybnk48/download/
+
 ```
 
 
