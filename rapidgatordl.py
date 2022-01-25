@@ -43,7 +43,7 @@ with open(LISTOFDOWNLOAD) as fp:
             print("++END++")
             sys.exit(0)
 
-        if len(line.strip().split("|")) > 2 :
+        if len(line.strip().split("|")) > 1 :
             _url = line.strip().split("|")[0].strip()
             file_name_alt = line.strip().split("|")[1].strip()
         else :
@@ -80,6 +80,8 @@ with open(LISTOFDOWNLOAD) as fp:
             if os.path.exists(PATH + "/" + file_name) :
                 file_name = _file_id
         ## end IF
+        
+        file_name = file_name.replace("'","")
 
         url = RPGURL_FILEDOWNLOAD
         params = {"file_id": _file_id, "token": token}
