@@ -5,16 +5,21 @@ Download file from rapidgator with premium user
 Download by read list of URL in text file (Example : dl.txt)
 
 ### How to run
-
 ```sh
-$ python rapidgatorstatus.py {USERNAME-premiumuser} {PASSWORD} {FULL_PATH_OF_FILE_dl.txt}
+Usage: rapidgatorstatus.py [OPTIONS]
+
+Options:
+  -u, --username TEXT  [required]
+  -p, --password TEXT  [required]
+  -f, --filelist TEXT  [required]
+  --help               Show this message and exit.
 ```
 
 ### Example
 ```sh
-$ python rapidgatorstatus.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dl.txt
+$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/dl.txt
 
-$ python rapidgatorstatus.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dlwithrename.txt
+$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/dlwithrename.txt
 
 ```
 
@@ -23,16 +28,22 @@ $ python rapidgatorstatus.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dlwit
 Download by read list of URL in text file (Example : dl.txt)
 
 ### How to run
-
 ```sh
-$ python rapidgatordl.py {USERNAME-premiumuser} {PASSWORD} {FULL_PATH_OF_FILE_dl.txt} {FULL_PATH_OF_SAVE_TO_DIRECTORY}
-```
+Usage: rapidgatordl.py [OPTIONS]
+
+Options:
+  -u, --username TEXT       [required]
+  -p, --password TEXT       [required]
+  -f, --filelist TEXT       [required]
+  -d, --savedirectory TEXT  [required]
+  --help                    Show this message and exit.
+  ```
 
 ### Example
 ```sh
-$ python rapidgatordl.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dl.txt /home/noeybnk48/download/
+$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/download/ --filelist /home/noeybnk48/dl.txt
 
-$ python rapidgatordl.py noeybnk48@gmail.com noeyBNK48 /home/noeybnk48/dlwithrename.txt /home/noeybnk48/download/
+$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --filelist /home/noeybnk48/dlwithrename.txt --directory /home/noeybnk48/download/
 
 ```
 
@@ -43,12 +54,20 @@ Download by URL in argument
 ### How to run
 
 ```sh
-$ python rapidgatorsingle.py {USERNAME-premiumuser} {PASSWORD} {RAPIDURL} {FULL_PATH_OF_SAVE_TO_DIRECTORY}
+Usage: rapidgatorsingle.py [OPTIONS]
+
+Options:
+  -u, --username TEXT       [required]
+  -p, --password TEXT       [required]
+  -url, --url TEXT          [required]
+  -d, --savedirectory TEXT  [required]
+  --help                    Show this message and exit.
 ```
 
 ### Example
 ```sh
-$ python rapidgatorsingle.py noeybnk48@gmail.com noeyBNK48 https://rg.to/file/x54f6ed3db794b9b99ca14f6b70e053d /home/noeybnk48/download/
+$ python rapidgatorsingle.py --username noeybnk48@gmail.com --password noeyBNK48 --url https://rg.to/file/x318300757fa8c7234e9b837431efa5186  --directory /home/noeybnk48/download/
+
 ```
 
 ###
