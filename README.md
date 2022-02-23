@@ -17,9 +17,9 @@ Options:
 
 ### Example
 ```sh
-$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/dl.txt
+$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/dl.txt
 
-$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/dlwithrename.txt
+$ python rapidgatorstatus.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/dlwithrename.txt
 
 ```
 
@@ -41,9 +41,9 @@ Options:
 
 ### Example
 ```sh
-$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --directory /home/noeybnk48/download/ --filelist /home/noeybnk48/dl.txt
+$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/download/ --filelist /home/noeybnk48/dl.txt
 
-$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --filelist /home/noeybnk48/dlwithrename.txt --directory /home/noeybnk48/download/
+$ python rapidgatordl.py --username noeybnk48@gmail.com --password noeyBNK48 --savedirectory /home/noeybnk48/download/ --filelist /home/noeybnk48/dlwithrename.txt
 
 ```
 
@@ -66,7 +66,7 @@ Options:
 
 ### Example
 ```sh
-$ python rapidgatorsingle.py --username noeybnk48@gmail.com --password noeyBNK48 --url https://rg.to/file/x318300757fa8c7234e9b837431efa5186  --directory /home/noeybnk48/download/
+$ python rapidgatorsingle.py --username noeybnk48@gmail.com --password noeyBNK48 --url https://rg.to/file/x318300757fa8c7234e9b837431efa5186  --savedirectory /home/noeybnk48/download/
 
 ```
 
