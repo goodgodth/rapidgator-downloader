@@ -82,7 +82,7 @@ def rapiddownload(USERNAME , PASSWORD , LISTOFDOWNLOAD , PATH):
             print(data)
             _dl_url = data["response"]["download_url"]
             print("Response :" + str(data) + " \ngetDownloadLink : " + str(_dl_url))
-            download_cmd = "wget -P " + str(PATH) + " -O '" +str(PATH) + "/" + str(file_name, 'utf-8') + "' '" + str(_dl_url) + "'"
+            download_cmd = "wget -nc -P " + str(PATH) + " -O '" +str(PATH) + "/" + str(file_name, 'utf-8') + "' '" + str(_dl_url) + "'"
 
             print(download_cmd)
             os.system(download_cmd)
