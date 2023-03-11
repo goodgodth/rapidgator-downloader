@@ -21,10 +21,10 @@ def rapiddownload(USERNAME , PASSWORD , LISTOFDOWNLOAD , PATH):
         sys.exit(0)
     
     PARAMS = {"login": USERNAME, "password": PASSWORD}
-    r = requests.get(url=RPGURL_LOGIN, params=PARAMS)
-    data = r.json()
-    token = data["response"]["token"]
     with open(LISTOFDOWNLOAD) as fp:
+        r = requests.get(url=RPGURL_LOGIN, params=PARAMS)
+        data = r.json()
+        token = data["response"]["token"]
         line = fp.readline()
         cnt = 1
         while line:
